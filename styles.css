@@ -1,0 +1,69 @@
+/* Estilo global */
+body {
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para centrar el QR en relación con el contenedor */
+}
+
+/* Input de QR */
+#qrInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los botones */
+button {
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-bottom: 20px; /* Espacio entre botones */
+    transition: transform 0.2s ease;
+    border-radius: 5px;
+}
+
+button:hover {
+    transform: translateY(-5px);
+}
+
+/* Estilo específico para el botón de generar QR */
+#generateButton {
+    background-image: url('generate.png');
+}
+
+/* Contenedor de QR */
+#qrCodeContainer {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Ajusta la altura según sea necesario */
+}
