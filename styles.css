@@ -1,15 +1,23 @@
 /* Estilo global */
 body {
-    background-image: url('background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    margin: 0;
+    overflow: hidden; /* Para evitar barras de desplazamiento por el video de fondo */
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
+}
+
+/* Video de fondo */
+#backgroundVideo {
+    position: fixed; /* Fijo en el fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Para cubrir toda la pantalla sin deformarse */
+    z-index: -1; /* Detrás de todo el contenido */
 }
 
 /* Contenedor */
@@ -26,18 +34,19 @@ body {
 
 /* Input de QR */
 #qrInput {
-    width: 100%;
+    width: calc(100% - 22px); /* Ajusta el ancho del input para que no se salga del contenedor */
     padding: 10px;
     margin-bottom: 20px;
     font-size: 18px;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
 }
 
 /* Estilo de los botones */
 button {
-    width: 100%;
+    width: calc(100% - 22px); /* Ajusta el ancho del botón para que no se salga del contenedor */
     height: 60px;
     border: none;
     background-size: cover;
@@ -47,15 +56,16 @@ button {
     margin-bottom: 20px; /* Espacio entre botones */
     transition: transform 0.2s ease;
     border-radius: 5px;
-}
-
-button:hover {
-    transform: translateY(-5px);
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
 }
 
 /* Estilo específico para el botón de generar QR */
 #generateButton {
     background-image: url('generate.png');
+}
+
+button:hover {
+    transform: translateY(-5px);
 }
 
 /* Contenedor de QR */
@@ -67,3 +77,4 @@ button:hover {
     align-items: center;
     height: 200px; /* Ajusta la altura según sea necesario */
 }
+
